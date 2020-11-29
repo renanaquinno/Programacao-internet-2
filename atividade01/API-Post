@@ -1,0 +1,14 @@
+import requests
+
+url = "https://jsonplaceholder.typicode.com/posts/1/comments"
+dados = {'postId': 1, 'id' : 6,'name': 'Teste POST','email': 'test@post.com', 'body': 'Teste post'}
+response = requests.post(url, data = dados)
+
+print(response.json())
+
+
+#Descrição
+#API com comentarios em um post
+
+#Como usar
+#Colocar os parametros em dados

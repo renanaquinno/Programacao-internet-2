@@ -1,0 +1,17 @@
+import requests
+
+url = "https://freegeoip.app/json/"
+
+headers = {
+    'accept': "application/json",
+    'content-type': "application/json"
+    }
+
+response = requests.request("GET", url, headers=headers)
+
+print(response.text)
+
+#OBJETIVO
+#freegeoip.app fornece uma API de gelocation de IP gratuita para desenvolvedores de software. 
+Ele usa um banco de dados de endereços IP que estão associados a cidades junto com outras 
+informações relevantes como fuso horário, latitude e longitude.

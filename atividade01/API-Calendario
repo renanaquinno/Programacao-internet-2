@@ -1,0 +1,18 @@
+import requests
+ano = 1990
+mes = 7
+dia = 10
+url = "http://calapi.inadiutorium.cz/api/v0/en/calendars/default/{ano}/{mes}/{dia}"
+url = url.format(ano=ano,mes=mes,dia=dia)
+response = requests.get(url).json()
+
+print(response)
+
+
+#Objetivo
+#A API do Calendário Litúrgico expõe o calendário litúrgico católico romano calculado 
+#de acordo com as normas estabelecidas pela reforma litúrgica após o Concílio Vaticano II. 
+#Vários calendários Sanctorale estão disponíveis e outros podem ser adicionados facilmente.
+
+#Como usar
+#Apenas coloque da data de acordo com as indicações, dia, mes e ano.
